@@ -1,11 +1,24 @@
-#pragma once
+/*
+ *  Global.h
+ *
+ *  Created on  : 2021.10.23.
+ *      Author  : Sehoon Jang
+ *
+ */
+
+#ifndef _GLOBAL_H_
+#define _GLOBAL_H_
 
 #include <windows.h>
 #include <tchar.h>
 #include <stdio.h>
 #include <strsafe.h>
+#include <functional>
 
-#include "SimConnect.h"
+
+
+int                     quit;
+HANDLE                  hSimConnect;
 
 enum GROUP_ID {
     GROUP0,
@@ -19,3 +32,6 @@ enum EVENT_ID {
 enum INPUT_ID {
     INPUT0,
 };
+
+
+#endif /* _GLOBAL_H_ */

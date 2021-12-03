@@ -144,12 +144,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source\CamSim.cpp" />
-    <ClCompile Include="source\CockpitCam.cpp" />
+    <ClCompile Include="CamSim.cpp" />
+    <ClCompile Include="CockpitCam.cpp" />
+    <ClCompile Include="SimConnCallBack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\CockpitCam.h" />
-    <ClInclude Include="source\Global.h" />
+    <ClInclude Include="CockpitCam.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="MySimConnect.h" />
+    <ClInclude Include="SimConnCallBack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
