@@ -5,8 +5,6 @@
 #include <stdio.h>
 #include <strsafe.h>
 
-#include "SimConnect.h"
-
 enum GROUP_ID {
     GROUP0,
 };
@@ -19,3 +17,5 @@ enum EVENT_ID {
 enum INPUT_ID {
     INPUT0,
 };
+
+HANDLE                      hSimConnect;

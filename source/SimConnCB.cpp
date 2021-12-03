@@ -1,34 +1,21 @@
-﻿// CamSim.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
-//
-
-#include <iostream>
-#include "CockpitCam.h"
 #include "SimConnCB.h"
 
-DispatchProc		m_cb = NULL;
-
-int __cdecl main(int argc, _TCHAR* argv[])
+SimConnCB::SimConnCB()
 {
-	CockpitCam*			CAM		= new CockpitCam;
+    quit = 0;
+    hSimConnect = NULL;
+    cameraBank = 0.0f;
 
-	if (m_cb == NULL)
-	{
-		std::cout << "Callback Function is not set" << std::endl;
-	}
-	
-	SetCallBack(MyDispatchProcCC);
-	
-
-	CAM->start();
-	
-
-	return 0;
 }
 
-void SetCallBack(DispatchProc cb) { m_cb = cb; }
+
+SimConnCB::~SimConnCB()
+{
+
+}
 
 
-float normalize180(float view)
+float SimConnCB::normalize180(float view)
 {
     while (view < -180.0f) view += 360.0f;
     while (view < 180.0f) view -= 360.0f;
@@ -36,7 +23,7 @@ float normalize180(float view)
     return view;
 }
 
-void CALLBACK MyDispatchProcCC(SIMCONNECT_RECV* pData, DWORD cbData, void* pContext)
+void CALLBACK SimConnCB::MyDispatchProcCC(SIMCONNECT_RECV* pData, DWORD cbData, void* pContext)
 {
     HRESULT hr;
 

@@ -10,12 +10,19 @@
 #define _COCKPITCAM_H_
 
 #include "Global.h"
+#include "SimConnCB.h"
 
-class CockpitCam
+
+class CockpitCam : public SimConnCB
 {
 public:
     CockpitCam();
     ~CockpitCam();
+    
+    /* Callback variable */
+    DispatchProc            m_cb;
+
+    void SetCallback(DispatchProc _cb) { m_cb = _cb; }
 
     int start(void);
 
@@ -24,17 +31,10 @@ public:
     /* output variable */
 
 private:
-    
-    /* internal variable */
-    int             quit;
-    HANDLE          hSimConnect;
-    static float    cameraBank;
-    DispatchProc    MyDispatchProcCC;
 
     /* internal Function*/
-    float   normalize180(float view);
-    void    MyDispatchProcCC(SIMCONNECT_RECV* pData, DWORD cbData, void* pContext);
-    void    testCockpitCamera(void);
+    void                        testCockpitCamera(void);
+
 
 };
 

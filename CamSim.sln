@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CamSim", "CamSim.vcxproj", "{E3CA1CA7-407C-4B2C-A225-D37415D607F0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CamSim", "source\CamSim.vcxproj", "{E3CA1CA7-407C-4B2C-A225-D37415D607F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

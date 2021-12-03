@@ -15,18 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\CamSim.cpp">
+    <ClCompile Include="CamSim.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="source\CockpitCam.cpp">
+    <ClCompile Include="CockpitCam.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SimConnCB.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\CockpitCam.h">
+    <ClInclude Include="CockpitCam.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="source\Global.h">
+    <ClInclude Include="Global.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SimConnCB.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
