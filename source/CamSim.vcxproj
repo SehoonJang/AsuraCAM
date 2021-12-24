@@ -146,12 +146,13 @@
   <ItemGroup>
     <ClCompile Include="CamSim.cpp" />
     <ClCompile Include="CockpitCam.cpp" />
-    <ClCompile Include="SimConnCB.cpp" />
+    <ClCompile Include="SimConnCallBack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CockpitCam.h" />
     <ClInclude Include="Global.h" />
-    <ClInclude Include="SimConnCB.h" />
+    <ClInclude Include="MySimConnect.h" />
+    <ClInclude Include="SimConnCallBack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

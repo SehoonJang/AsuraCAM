@@ -21,7 +21,7 @@
     <ClCompile Include="CockpitCam.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SimConnCB.cpp">
+    <ClCompile Include="SimConnCallBack.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,10 @@
     <ClInclude Include="Global.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="SimConnCB.h">
+    <ClInclude Include="SimConnCallBack.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MySimConnect.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

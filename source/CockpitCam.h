@@ -1,5 +1,5 @@
 /*
- * CockpitCam.h
+ *  CockpitCam.h
  *
  *  Created on  : 2021.10.23.
  *      Author  : Sehoon Jang
@@ -10,33 +10,39 @@
 #define _COCKPITCAM_H_
 
 #include "Global.h"
-#include "SimConnCB.h"
+#include "SimConnCallBack.h"
 
+using namespace std;
 
-class CockpitCam : public SimConnCB
+//static void    CALLBACK     MyDispatchProcCC(SIMCONNECT_RECV* pData, DWORD cbData, void* pContext);
+
+class CockpitCam
 {
 public:
     CockpitCam();
     ~CockpitCam();
-    
-    /* Callback variable */
-    DispatchProc            m_cb;
 
-    void SetCallback(DispatchProc _cb) { m_cb = _cb; }
-
-    int start(void);
+    /* External Function Call */
+    void        init(void);
+    int         start(void);
 
     /* input variable */
-
+    SimConnCallBack     cb;
+    static float        cameraBank;
+    float               normalize180(float view);
+    void    CALLBACK    MyDispatchProcCC(SIMCONNECT_RECV* pData, DWORD cbData, void* pContext);
     /* output variable */
 
 private:
 
+    /* internal variable */
+     
+
     /* internal Function*/
     void                        testCockpitCamera(void);
-
-
+   
 };
+
 
 
 #endif /* _COCKPITCAM_H_ */
